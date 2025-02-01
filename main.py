@@ -97,7 +97,8 @@ async def handler(message: types.Message):
             {"system_instruction":
 
             key = random.choice([
-                "AIzaSyBGO5tRJ3jai8xNs4D9Kp3fTtCGe_H1vUg"
+                "AIzaSyBGO5tRJ3jai8xNs4D9Kp3fTtCGe_H1vUg",
+                " AIzaSyCdn-ktaMISgQ26AZ0RfmcgM6D-0wqpPbQ"
             ])
 
             async with session.post(f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key={key}", json=data) as response:
