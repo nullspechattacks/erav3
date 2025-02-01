@@ -99,7 +99,8 @@ async def handler(message: types.Message):
             key = random.choice([
                 "AIzaSyBGO5tRJ3jai8xNs4D9Kp3fTtCGe_H1vUg",
                 "AIzaSyCdn-ktaMISgQ26AZ0RfmcgM6D-0wqpPbQ",
-                "AIzaSyBlAmFeWj_i-yOT0NptrzFoZsw16PC8m_k"
+                "AIzaSyBlAmFeWj_i-yOT0NptrzFoZsw16PC8m_k",
+                "AIzaSyCIuK53u4j_t0R2JnArg43ns_4y-QGiRl0"
             ])
 
             async with session.post(f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key={key}", json=data) as response:
