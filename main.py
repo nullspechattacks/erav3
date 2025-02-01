@@ -96,7 +96,9 @@ async def handler(message: types.Message):
         async with aiohttp.ClientSession() as session:
             {"system_instruction":
 
-            key = random.choice(["AIzaSyD5K_4GI3snC--9sHFdRrzcbtsrACrqq7k", "AIzaSyAgsSk3a225So8vApGkGZOWYpNNi5AV00g"])
+            key = random.choice([
+                "AIzaSyBKxazd3nC91lmKo6uk3NcAAu_SxsHPwpI"
+            ])
 
             async with session.post(f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key={key}", json=data) as response:
                 try:
