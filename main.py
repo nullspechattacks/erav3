@@ -405,7 +405,8 @@ async def handler(message: types.Message):
                 "parts": {
                   "text": text
                 }
-              }
+              },
+              "tools": [{"google_search": {}}]
             }
             key = random.choice(["AIzaSyD5K_4GI3snC--9sHFdRrzcbtsrACrqq7k", "AIzaSyAgsSk3a225So8vApGkGZOWYpNNi5AV00g"])
 
