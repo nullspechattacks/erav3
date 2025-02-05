@@ -25,7 +25,7 @@ months = {
     "December": "декабря"
 }
 
-bot = Bot(token="")
+bot = Bot(token="7804030886:AAFmqYAPW08gRlS6N6ASwqp5GXNPyifcS64")
 dp = Dispatcher()
 
 
