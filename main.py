@@ -409,7 +409,7 @@ async def handler(message: types.Message):
               "tools": [{"google_search": {}}]
             }
             key = random.choice(["AIzaSyD5K_4GI3snC--9sHFdRrzcbtsrACrqq7k", "AIzaSyAgsSk3a225So8vApGkGZOWYpNNi5AV00g"])
-            msg = await message.reply("Генерирую ответ...\n\nКанал/чат бота: @nullowns")
+            msg = await message.reply("Генерирую ответ...\nКанал/чат бота: @nullowns")
 
             async with session.post(f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={key}", json=data) as response:
                 try:
