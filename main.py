@@ -32,7 +32,7 @@ dp = Dispatcher()
 @dp.message()
 async def handler(message: types.Message):
     if message.chat.type == "private":
-        await message.reply("Блять, ты попал в моё рабство!\nДобавь меня в группу, и я начну отписывать участникам свой текст на сообщения, у которых текст начинается с точки.")
+        await message.answer("Блять, ты попал в моё рабство!\nДобавь меня в группу, и я начну отписывать участникам свой текст на сообщения, у которых текст начинается с точки.")
         return
 
     elif message.chat.id == -1002258024710 and message.sender_chat and message.sender_chat.id not in [-1002258024710, -1002007082377]:
