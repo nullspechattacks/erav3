@@ -88,7 +88,7 @@ async def handler(message: types.Message):
     elif not message.text:
         return
 
-    elif message.text.startswith(".") or message.reply_to_message:
+    elif message.text.startswith("."):
         text = message.text[1:].lstrip()
         if not text:
             return
@@ -421,3 +421,5 @@ async def handler(message: types.Message):
 
 async def main():
     await dp.start_polling(bot)
+
+asyncio.run(main())
