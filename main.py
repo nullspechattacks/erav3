@@ -408,7 +408,8 @@ async def handler(message: types.Message):
                   "text": text
                 }
               },
-              "tools": [{"google_search": {}}]
+              "tools": [{"google_search": {}}],
+              "generationConfig": {"maxOutputTokens": 1024}
             }
             key = random.choice(["AIzaSyD5K_4GI3snC--9sHFdRrzcbtsrACrqq7k", "AIzaSyAgsSk3a225So8vApGkGZOWYpNNi5AV00g"])
 
