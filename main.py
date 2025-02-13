@@ -411,13 +411,8 @@ async def handler(message: types.Message):
               "tools": [{"google_search": {}}]
             }
             key = random.choice(["AIzaSyD5K_4GI3snC--9sHFdRrzcbtsrACrqq7k", "AIzaSyAgsSk3a225So8vApGkGZOWYpNNi5AV00g"])
-            msg = await message.reply("Генерирую ответ...\nМой канал/чат: @nullowns")
 
             async with session.post(f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={key}", json=data) as response:
-                try:
-                    await bot.delete_message(chat_id=message.chat.id, message_id=msg.message_id)
-                except:
-                    pass
                 try:
                     msg = await response.json()["candidates"][0]["content"]["parts"][0]["text"].replace("**", "")
                     if msg.count("```") % 2 != 0:
