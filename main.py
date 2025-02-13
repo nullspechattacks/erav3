@@ -419,7 +419,10 @@ async def handler(message: types.Message):
                 except:
                     pass
                 try:
-                    await message.reply((await response.json())["candidates"][0]["content"]["parts"][0]["text"], parse_mode="Markdown")
+                    msg = await response.json()["candidates"][0]["content"]["parts"][0]["text"]
+                    if msg.count("```") % 2 != 0:
+                        msg += "```"
+                    await message.reply(msg, parse_mode="Markdown")
                 except Exception as e:
                     await message.reply(f"Ошибка: {e}")
 
