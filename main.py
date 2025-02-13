@@ -419,7 +419,7 @@ async def handler(message: types.Message):
                 except:
                     pass
                 try:
-                    msg = await response.json()["candidates"][0]["content"]["parts"][0]["text"]
+                    msg = await response.json()["candidates"][0]["content"]["parts"][0]["text"].replace("**", "")
                     if msg.count("```") % 2 != 0:
                         msg += "```"
                     await message.reply(msg, parse_mode="Markdown")
