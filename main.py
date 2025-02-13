@@ -28,6 +28,10 @@ months = {
 bot = Bot(token="7804030886:AAFmqYAPW08gRlS6N6ASwqp5GXNPyifcS64")
 dp = Dispatcher()
 
+async def start():
+    while True:
+        print("Hello, World!")
+        await asyncio.sleep(1)
 
 @dp.message()
 async def handler(message: types.Message):
@@ -420,6 +424,7 @@ async def handler(message: types.Message):
                     await message.reply(f"Ошибка: {e}")
 
 async def main():
+    asyncio.create_task(start())
     await dp.start_polling(bot)
 
 asyncio.run(main())
